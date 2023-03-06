@@ -1,7 +1,7 @@
 
 resource "google_compute_instance" "vm-pagi" {
-  machine_type = "e2-medium"
-  name = "mesin-pagi"
+  machine_type = var.machine_type
+  name = "${var.name}-vm"
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-11"
